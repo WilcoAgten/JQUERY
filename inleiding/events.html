@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="google">Go to Google</button>
+    <p id="klikp"></p>
+    <button>Dont go to google</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+      $(function () {
+
+        $("button#google").click(function() {
+  		    window.location="https://www.google.com";
+        });
+
+       $('#google').mouseenter(function () {
+          $('#klikp').text("klik om naar google te gaan.");
+       })
+       $('#google').mouseleave(function () {
+          $('#klikp').text("");
+       })
+      });
+    </script>
+  </body>
+</html>
